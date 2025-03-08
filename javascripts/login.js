@@ -54,8 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response.ok) {
         localStorage.setItem("username-ppl", username);
-        window.location.href = "/profile";
+        window.location.href = "/Participation.html";
       }
+      
     } catch (err) {
       console.error("Signup failed:", err);
       alert("Server error. Please try again.");
@@ -87,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   .then(data => {
       if (data.message === "Login successful!") {  // ✅ Check success message
           localStorage.setItem("username-ppl", username);  // ✅ Store username
-          window.location.href = "/profile"; // ✅ Redirect only on success
+          window.location.href = "/participation.html"; // ✅ Redirect only on success
       } else {
           alert("Invalid credentials!");
       }
